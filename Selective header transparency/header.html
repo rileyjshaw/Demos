@@ -3,44 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Selective header transparency</title>
-
-	<link rel="stylesheet" href="dragons.css">
-
+    <link rel="stylesheet" href="resetplus.css">
+	<link rel="stylesheet" href="basic.css" title='basic standard'>
+    <link rel="stylesheet" href="grad.css" title='grad'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,800' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="strippedswap.js"></script>
 </head>
 <body>
+    <div id="lgrad"></div>
 	<div id="blocker"></div>
+    <div id="rgrad"></div>
 
-	<div id="header">This is your header</div>
-
+	<div id="topbar">This is your top bar.</div>
+    <div id="backdrop">
 	<div id="content">
+        <p id="firstline"><strong>I saw a question</strong> popping up a bunch over at Stack Overflow: <q>"How can I make my nav bar show through to the background, and still be opaque for the text?"</q></p>
+        <p>As far as I could tell, nobody had answered it yet and there's a really simple way to do this. Don't worry about jQuery, hiding content based on your scroll value, or making a seperate scroll bar for your content. Calm down. Make your top bar stretch 100% of the page width, and make it transparent. Then, centered between the bar and your content, stick in an opaque bar that matches the content width. Done.</p>
+        <p>If you're okay with a solution in which one size does not fit all browsers, you could also use a CSS gradient as follows:</p>
+        <pre><code>
+background: linear-gradient(to right, rgba(255,128,128,0.5) 0%, rgba(255,128,128,0.5) 20%, rgba(148,84,84,1) 20%, rgba(148,84,84,1) 80%, rgba(255,128,128,0.5) 80%, rgba(255,128,128,0.5) 100%);
+        </code></pre>
+        <p>With all of the prefixes (but far from full browser support), it ends up looking like <a href="#" onclick="setActiveStyleSheet('grad'); return false;">this</a>.</p>
+        <p>Big thanks to Paul Sowden's <a href="http://www.alistapart.com/articles/alternate/">change function</a> and Alex Sirota's very handy <a href="http://www.colorzilla.com/gradient-editor/">CSS gradient editor</a>.</p>
 
-		<h1>HTML Ipsum Presents</h1>
-
-		<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-		<h2>Header Level 2</h2>
-			       
-		<ol>
-		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-		   <li>Aliquam tincidunt mauris eu risus.</li>
-		</ol>
-
-		<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-
-		<h3>Header Level 3</h3>
-
-		<ul>
-		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-		   <li>Aliquam tincidunt mauris eu risus.</li>
-		</ul>
-
-		<pre><code>
-		#header h1 a { 
-			display: block; 
-			width: 300px; 
-			height: 80px; 
-		}</code></pre>
-	</div>
-
+        <p class="ipsum">Anyways, have you heard of <a href="cupcakeipsum.com">cupcake ipsum?</a> Cupcake ipsum dolor sit amet pudding sweet roll oat cake. Jelly-o biscuit icing donut I love lollipop. Bonbon danish dragée dessert tootsie roll. Tart soufflé chocolate bar I love macaroon I love. Gummi bears cookie pastry chocolate cake. Chocolate bar jelly-o pastry donut candy macaroon. Tart sweet roll I love apple pie caramels donut dragée apple pie. Sweet brownie oat cake bonbon jelly tootsie roll bonbon pastry. Pudding jujubes ice cream muffin jelly beans bear claw tart topping tiramisu. Pastry candy canes fruitcake I love applicake. Tart tart caramels topping carrot cake cake gingerbread. Pie I love croissant. Cake cheesecake I love.
+        Donut sesame snaps tart candy biscuit topping. Pudding candy fruitcake croissant apple pie. Chupa chups oat cake jujubes chocolate candy canes macaroon. Dragée fruitcake brownie sweet roll. I love brownie gummies sugar plum lemon drops ice cream pie. Bonbon apple pie bear claw candy sesame snaps sesame snaps icing chocolate cake wypas. Pastry pastry bear claw pie sweet pastry toffee. Jujubes bear claw chocolate cake. Lollipop tiramisu halvah chupa chups toffee caramels. Applicake biscuit sweet muffin cookie. Dessert cake bear claw. Jujubes chocolate cake lemon drops soufflé fruitcake cheesecake. Gummies donut gummies ice cream faworki jelly. Dragée jelly candy canes pudding icing jelly-o pudding.
+        I love sweet cotton candy. Caramels brownie sweet dragée marshmallow chocolate danish. I love jelly powder. I love cupcake chupa chups. Bonbon halvah bonbon brownie ice cream pastry tiramisu cupcake. Jelly bonbon sweet roll chupa chups toffee danish. Bear claw croissant sesame snaps marzipan topping gingerbread liquorice. Lemon drops chocolate tart. Toffee fruitcake gummies croissant chocolate cake tiramisu dessert lemon drops. Liquorice carrot cake liquorice brownie halvah lollipop lollipop. Faworki oat cake jelly. Tart tart jelly soufflé cupcake jelly. Candy canes toffee marshmallow caramels sugar plum biscuit gingerbread. Bonbon I love I love chupa chups I love applicake apple pie gummies cotton candy.
+        Icing cotton candy muffin brownie gingerbread cake. Muffin gummi bears pastry chupa chups brownie pie tiramisu sesame snaps. Cookie bear claw ice cream. Bonbon halvah marshmallow liquorice oat cake. I love cupcake marshmallow powder sweet roll jujubes carrot cake marshmallow. Powder jujubes faworki tootsie roll sweet roll I love. Tart donut I love chocolate cake topping. Candy canes caramels gingerbread wafer cotton candy. I love caramels cheesecake tootsie roll macaroon powder I love brownie lollipop. Lemon drops icing candy cotton candy chupa chups I love cookie I love caramels. Wypas carrot cake carrot cake I love chocolate cake I love dragée liquorice I love. Wypas pudding apple pie lollipop. Powder dessert muffin candy canes.
+        Sugar plum pie topping. Candy dessert chocolate cotton candy I love brownie cupcake chocolate pastry. Marshmallow toffee topping chocolate cake pudding. Soufflé pie chocolate biscuit brownie muffin pastry sweet roll. Muffin muffin candy chupa chups pastry. Topping gingerbread tart oat cake toffee pastry apple pie candy cookie. Fruitcake oat cake candy canes bonbon marzipan sweet. Halvah I love candy fruitcake pie wypas candy I love. Cotton candy chocolate bar muffin lollipop soufflé sesame snaps tootsie roll. Liquorice applicake I love dessert applicake chocolate lemon drops carrot cake I love. Pastry gingerbread I love powder tiramisu faworki I love. Dessert toffee bear claw gingerbread sugar plum apple pie tootsie roll. Chocolate chocolate cake gingerbread cheesecake tootsie roll I love apple pie topping.</p>
+    </div>
+    </div>
 </body>
 </html>
